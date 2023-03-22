@@ -7,7 +7,8 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(202, 216, 255);
+  /* background-color: rgb(202, 224, 255); */
+  background-color: rgb(229, 247, 254);
   color: #212121;
   line-height: 1.5;
 
