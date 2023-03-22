@@ -3,9 +3,8 @@
   z-index: 2;
   width: 100%;
   height: 55px;
-  /* background-color: rgb(30, 123, 251); */
-  /* background-image: linear-gradient(rgb(30, 123, 251), rgb(202, 224, 255)); */
-  background-image: linear-gradient(rgb(48, 193, 255), rgb(229, 247, 254));
+
+  background-image: linear-gradient(rgb(30, 123, 251), rgb(202, 224, 255));
 }
 
 .header__container {
@@ -43,8 +42,7 @@
   align-items: center;
   width: 35px;
 
-  /* background-color: rgb(170, 205, 255); */
-  background-color: rgb(162, 227, 255);
+  background-color: rgb(170, 205, 255);
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border: none;
@@ -52,6 +50,5 @@
 }
 
 .icon {
-  /* fill: rgb(1, 20, 72); */
-  fill: rgb(0, 58, 82);
+  fill: rgb(1, 20, 72);
 }
