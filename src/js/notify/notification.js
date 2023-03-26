@@ -20,7 +20,7 @@ export function searchError() {
 }
 
 // Сповіщення про результат пошуку
-export function searchSucces({ totalHits }) {
+export function searchSucces(totalHits) {
   Notify.success(`Hooray! We found ${totalHits} images.`, notiflixOptions);
 }
 
