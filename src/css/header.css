@@ -21,6 +21,7 @@
 
 .search-form {
   display: flex;
+  height: 35px;
   width: 260px;
 
   background-color: rgb(244, 247, 250);
@@ -30,7 +31,6 @@
 
 .search-form input {
   width: 225px;
-  height: 35px;
   padding: 8px;
 
   background-color: transparent;
