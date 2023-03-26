@@ -1,4 +1,13 @@
+// Додатковий імпорт стилів для SimpleLightbox
+import 'simplelightbox/dist/simple-lightbox.min.css';
+import SimpleLightbox from 'simplelightbox';
 import { refs } from '../../index';
+
+// Створення модалки
+const simpleLightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
 
 // Стварення та рендеринг розмітки
 export function renderImageCard(array) {
@@ -6,13 +15,14 @@ export function renderImageCard(array) {
     .map(
       ({
         webformatURL,
+        largeImageURL,
         tags,
         likes,
         views,
         comments,
         downloads,
       }) => `<div class="photo-card">
-  <a class="image-link"><img class="photo" src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
+  <a class="image-link" href="${largeImageURL}"><img class="photo" src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
   <div class="info">
     <p class="info-item">
       <b>Likes</b> ${likes}
@@ -32,6 +42,7 @@ export function renderImageCard(array) {
     .join('');
 
   refs.galleryEl.insertAdjacentHTML('beforeend', imageCardMarkup);
+  simpleLightbox.refresh();
 }
 
 // Динамічне видалення розмітки
