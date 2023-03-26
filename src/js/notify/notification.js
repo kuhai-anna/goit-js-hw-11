@@ -9,7 +9,7 @@ const notiflixOptions = {
 };
 
 // Сповіщення про помилку пошуку
-export function onSearchError() {
+export function searchError() {
   Notify.failure(
     'Sorry, there are no images matching your search query. Please try again.',
     notiflixOptions
@@ -17,8 +17,16 @@ export function onSearchError() {
 }
 
 // Сповіщення про результат пошуку
-export function onSearchSucces({ totalHits }) {
+export function searchSucces({ totalHits }) {
   Notify.success(`Hooray! We found ${totalHits} images.`, notiflixOptions);
+}
+
+// Сповіщення про кінець результатів пошуку
+export function searchResulEnd() {
+  Notify.info(
+    `"We're sorry, but you've reached the end of search results."`,
+    notiflixOptions
+  );
 }
 
 // // Сповіщення про загальну помилку
