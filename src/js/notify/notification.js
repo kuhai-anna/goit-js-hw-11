@@ -5,7 +5,10 @@ const notiflixOptions = {
   width: '330px',
   fontSize: '16px',
   position: 'right-top',
+  borderRadius: '4px',
   timeout: 2500,
+  cssAnimationDuration: 600,
+  cssAnimationStyle: 'from-right',
 };
 
 // Сповіщення про помилку пошуку
