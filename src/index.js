@@ -35,17 +35,17 @@ async function onSearch(e) {
 
   if (imagePixabayService.query !== '') {
     try {
-      const data = await imagePixabayService.fetchImages();
+      const { hits, totalHits } = await imagePixabayService.fetchImages();
 
-      if (data.hits.length === 0) {
+      if (hits.length === 0) {
         throw new Error();
         // onSearchError();
-      } else if (data.hits.length < 40) {
-        searchSucces(data);
-        renderImageCard(data.hits);
+      } else if (hits.length < 40) {
+        searchSucces(totalHits);
+        renderImageCard(hits);
       } else {
-        searchSucces(data);
-        renderImageCard(data.hits);
+        searchSucces(totalHits);
+        renderImageCard(hits);
 
         refs.loadMoreBtn.style.display = 'block'; //багато картинок, показуємо кнопку loadMoreBtn
       }
