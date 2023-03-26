@@ -4,11 +4,6 @@ import SimpleLightbox from 'simplelightbox';
 import { refs } from '../../index';
 
 // Створення модалки
-// const simpleLightbox = new SimpleLightbox('.gallery a', {
-//   captionsData: 'alt',
-//   captionDelay: 250,
-// });
-
 const simpleLightbox = new SimpleLightbox('.gallery a');
 
 // Стварення та рендеринг розмітки
