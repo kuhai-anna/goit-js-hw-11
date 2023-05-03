@@ -39,6 +39,7 @@ async function onSearch(e) {
 
       if (hits.length === 0) {
         throw new Error();
+        // throw new Error(`Error! Status ${status}!`);
         // onSearchError();
       } else if (hits.length < 40) {
         searchSucces(totalHits);
